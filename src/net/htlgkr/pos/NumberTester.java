@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 /**
  *
@@ -46,7 +47,7 @@ public class NumberTester {
         
         BufferedReader in = null;
         try {
-            in = new BufferedReader(new FileReader(datName));
+            in = new BufferedReader(new FileReader("data"));
             String zeile = null;
             while ((zeile = in.readLine()) != null) {
                 System.out.println("Gelesene Zeile: " + zeile);
@@ -55,6 +56,7 @@ public class NumberTester {
             e.printStackTrace(); 
     
 }
+    }
     
     public interface NumberTest{
         boolean testNumber(int number);
