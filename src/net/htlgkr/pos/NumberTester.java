@@ -20,11 +20,16 @@ public class NumberTester {
     private NumberTest primeTester;
     private NumberTest palindromeTester;
     private String fileName;
+    
+    
+    public static void main(String[] args) throws FileNotFoundException{
+        NumberTester nt = new NumberTester("data");
+        nt.testFile();
+    }
+    
     public NumberTester(String fileName){
         this.fileName = fileName;
     }
-    
-    
     
     public void setOddEvenTester(NumberTest oddTester){
         this.oddTester = oddTester;
@@ -38,25 +43,26 @@ public class NumberTester {
         this.palindromeTester = palindromeTester;
     }
     
-    public void testFile() throws FileNotFoundException{
-        File file = new File("data");
+    public void testFile() {
+        String[] line = new String[3];
+        int num1 =0;
+        int num2 =0;
         
-        if(!file.canRead() || !file.isFile()){
-            System.exit(0);
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            int lines = Integer.parseInt(br.readLine());
+            for(int i = 0; i<lines; i++){
+                line = br.readLine().split(" ");
+                num1 = Integer.parseInt(line[0]);
+                num2 = Integer.parseInt(line[1]);
+            }
         }
         
-        BufferedReader in = null;
-        try {
-            in = new BufferedReader(new FileReader("data"));
-            String zeile = null;
-            while ((zeile = in.readLine()) != null) {
-                System.out.println("Gelesene Zeile: " + zeile);
-            }
-        } catch (IOException e) {
-            e.printStackTrace(); 
-    
-}
     }
+        
+       
+
+    
     
     public interface NumberTest{
         boolean testNumber(int number);
