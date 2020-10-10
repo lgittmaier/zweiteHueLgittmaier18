@@ -40,5 +40,11 @@ public class RationalCalculator extends AbstractCalculator{
     public Number divide(Number a, Number b) {
         return new Number(a.getA() / b.getB(), a.getB()/ b.getA());
     }
+
+    int add(int a, int b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
     
 }
