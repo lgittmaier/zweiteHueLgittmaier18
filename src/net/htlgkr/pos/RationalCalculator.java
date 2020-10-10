@@ -17,17 +17,23 @@ public class RationalCalculator extends AbstractCalculator{
 
     @Override
     public Number add(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Number num1 = new Number(a.getA() * b.getB(), a.getB() * b.getB());
+        Number num2 = new Number( b.getA() * a.getB(), a .getB() * b.getB());
+        return new Number(num1.getA() + num2.getA(), num1.getB() + num2.getB());
     }
 
     @Override
     public Number subtract(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Number num1 = new Number(a.getA() * b.getB(), a.getB() * b.getB());
+        Number num2 = new Number( b.getA() * a.getB(), a .getB() * b.getB());
+        return new Number(num1.getA() - num2.getA(), num1.getB() - num2.getB());
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Number num1 = new Number(a.getA() * b.getB(), a.getB() * b.getB());
+        return num1;
+       
     }
 
     @Override

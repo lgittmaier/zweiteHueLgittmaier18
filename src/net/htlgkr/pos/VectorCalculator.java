@@ -9,6 +9,30 @@ package net.htlgkr.pos;
  *
  * @author lgittmaier18
  */
-public class VectorCalculator {
+public class VectorCalculator extends AbstractCalculator{
+
+    public VectorCalculator(Number.CalculationOperation add, Number.CalculationOperation subtract, Number.CalculationOperation multiplay, Number.CalculationOperation divide) {
+        super(add, subtract, multiplay, divide);
+    }
+
+    @Override
+    public Number add(Number a, Number b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Number subtract(Number a, Number b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Number multiply(Number a, Number b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Number divide(Number a, Number b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
