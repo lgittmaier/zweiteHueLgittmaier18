@@ -17,17 +17,19 @@ public class VectorCalculator extends AbstractCalculator{
 
     @Override
     public Number add(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return new Number(a.getA() + b.getA(), a.getB() + b.getB());
     }
 
     @Override
     public Number subtract(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new Number(a.getA() - b.getA(), a.getB() - b.getB());
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Number num1 = new Number(a.getA() * b.getA(), 0.0);
+        Number num2 = new Number(a.getB() * b.getB(), 0.0);
+        return new Number(num1 + 0.0, num2+ 0.0);
     }
 
     @Override

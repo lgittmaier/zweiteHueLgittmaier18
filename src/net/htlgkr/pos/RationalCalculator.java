@@ -38,7 +38,7 @@ public class RationalCalculator extends AbstractCalculator{
 
     @Override
     public Number divide(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new Number(a.getA() / b.getB(), a.getB()/ b.getA());
     }
     
 }
