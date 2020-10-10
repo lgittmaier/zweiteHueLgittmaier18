@@ -27,14 +27,15 @@ public class VectorCalculator extends AbstractCalculator{
 
     @Override
     public Number multiply(Number a, Number b) {
-        Number num1 = new Number(a.getA() * b.getA(), 0.0);
-        Number num2 = new Number(a.getB() * b.getB(), 0.0);
-        return new Number(num1 + 0.0, num2+ 0.0);
+        //Number num1 = new Number(a.getA() * b.getA(), 0.0);
+        //Number num2 = new Number(a.getB() * b.getB(), 0.0);
+        //return new Number(num1 + 0.0, 0.0+ num2);
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public Number divide(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException(); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
